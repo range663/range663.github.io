@@ -1,5 +1,12 @@
 ---
 layout: default
-title: test title
+title: 厘議blog
 ---
-<p>Hello world!</p>
+
+<h2>{{ page.title }}</h2>
+　　<p>恷仟猟嫗</p>
+　　<ul>
+　　　　{% for post in site.posts %}
+　　　　　　<li>{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+　　　　{% endfor %}
+　　</ul>
